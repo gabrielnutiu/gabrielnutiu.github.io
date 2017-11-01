@@ -61,7 +61,7 @@ function deseneaza_patrat_canvas(alpha, gamma, beta)
 	var h = canvas.getAttribute("height");
 	
 	
-	var raza = 10;
+	var latura = 10;
 	var centru = {x : w / 2, y : h / 2};
 	var max_deplasare_x = w / 2 - latura / 2;
 	var max_deplasare_y = h / 2 - latura / 2;
@@ -69,7 +69,7 @@ function deseneaza_patrat_canvas(alpha, gamma, beta)
 // gamma == -90 -> 0 + raza
 // gamma == 90 -> w - raza
 	//context.arc(centru.x - gamma / 90 * max_deplasare_x, centru.y + beta / 90 * max_deplasare_y, raza, 0, 2 * Math.PI);
-	context. strokeRect(centru.x - latura / 2 - gamma / 90 * max_deplasare_x, centru.y + latura / 2 + beta / 90 * max_deplasare_y, raza, 0, 2 * Math.PI);
+	context. strokeRect(centru.x - latura / 2 - gamma / 90 * max_deplasare_x, centru.y + latura / 2 + beta / 90 * max_deplasare_y, latura, 0, 2 * Math.PI);
 	context.stroke();
 
 }

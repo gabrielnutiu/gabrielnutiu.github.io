@@ -50,6 +50,31 @@ function deseneaza_cerc_svg(gamma, beta)
 }
 //-------------------------------------------------
 
+function deseneaza_patrat_canvas(alpha, gamma, beta)
+{
+	var canvas = document.getElementById("id_canvas");
+	var context = canvas.getContext("2d");
+	
+	context.beginPath();
+	var w = canvas.getAttribute("width");
+	var h = canvas.getAttribute("height");
+	
+	context.clearRect(0, 0, w, h);
+	
+	var raza = 10;
+	var centru = {x : w / 2, y : h / 2};
+	var max_deplasare_x = w / 2 - raza;
+	var max_deplasare_y = h / 2 - raza;
+// gamma == 0 -> centru.x
+// gamma == -90 -> 0 + raza
+// gamma == 90 -> w - raza
+	//context.arc(centru.x - gamma / 90 * max_deplasare_x, centru.y + beta / 90 * max_deplasare_y, raza, 0, 2 * Math.PI);
+	context. strokeRect(centru.x - latura / 2 - gamma / 90 * max_deplasare_x, centru.y + latura / 2 + beta / 90 * max_deplasare_y, raza, 0, 2 * Math.PI);
+	context.stroke();
+
+}
+//-------------------------------------------------
+
 function ondeviceorientation(event)
 {
 	var alpha = event.alpha;

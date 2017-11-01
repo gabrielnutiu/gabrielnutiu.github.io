@@ -1,5 +1,5 @@
 
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.01.3";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.01.4";
 window.addEventListener('deviceorientation', ondeviceorientation);
 window.addEventListener('devicemotion', ondevicemotion);
 
@@ -63,8 +63,8 @@ function deseneaza_patrat_canvas(alpha, gamma, beta)
 	
 	var raza = 10;
 	var centru = {x : w / 2, y : h / 2};
-	var max_deplasare_x = w / 2 - raza;
-	var max_deplasare_y = h / 2 - raza;
+	var max_deplasare_x = w / 2 - latura / 2;
+	var max_deplasare_y = h / 2 - latura / 2;
 // gamma == 0 -> centru.x
 // gamma == -90 -> 0 + raza
 // gamma == 90 -> w - raza

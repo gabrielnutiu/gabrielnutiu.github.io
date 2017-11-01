@@ -1,5 +1,5 @@
 
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.01.2";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.01.3";
 window.addEventListener('deviceorientation', ondeviceorientation);
 window.addEventListener('devicemotion', ondevicemotion);
 
@@ -55,11 +55,11 @@ function deseneaza_patrat_canvas(alpha, gamma, beta)
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
 	
+	context.clearRect(0, 0, w, h);
 	context.beginPath();
 	var w = canvas.getAttribute("width");
 	var h = canvas.getAttribute("height");
 	
-	context.clearRect(0, 0, w, h);
 	
 	var raza = 10;
 	var centru = {x : w / 2, y : h / 2};

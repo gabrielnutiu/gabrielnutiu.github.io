@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.08.9";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.08.10";
 
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
@@ -76,6 +76,6 @@ function on_touch_end(e)
 			break;
 			}
 			// trevuie sters touch_id[j]
-			touch_id.splice[j, 1];
+			touch_id.splice(j, 1);
 	}
 }

@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.08.4";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.08.5";
 
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
@@ -6,6 +6,8 @@ document.getElementById("id_logic_level_version").innerHTML = "Business level ve
 	
 	canvas.addEventListener("touchstart", on_touch_start);
 	canvas.addEventListener("touchmove", on_touch_move);
+	
+	var touch_id = [];
 	
 function generate_random_color()
 {

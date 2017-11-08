@@ -12,6 +12,6 @@ document.getElementById("id_logic_level_version").innerHTML = "Business level ve
 		{
 			context.beginPath();
 			context.arc(touches[i].pageX, touches[i].pageY, 10, 0, Math.PI);
-			contect.stroke();
+			context.stroke();
 		}
 	}

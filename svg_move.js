@@ -15,6 +15,7 @@ function on_touch_move(e)
 	var touches = e.changedTouches;
 	for(var i = 0; i < touches.length; i++)
 	{
+		e.preventDefault();
 		var circle = touches[i].target;
 		circle.setAttribute("cx", touches[i].pageX - rect_svg.left);
 		circle.setAttribute("cy", touches[i].pageX - rect_svg.top);

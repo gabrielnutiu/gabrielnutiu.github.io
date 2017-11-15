@@ -12,10 +12,11 @@ var rect_svg = svg.getBoundingClientRect();
 //------------------------------------------------------------------
 function on_touch_move(e)
 {
+	e.preventDefault();
+	
 	var touches = e.changedTouches;
 	for(var i = 0; i < touches.length; i++)
 	{
-		e.preventDefault();
 		var circle = touches[i].target;
 		circle.setAttribute("cx", touches[i].pageX - rect_svg.left);
 		circle.setAttribute("cy", touches[i].pageY - rect_svg.top);

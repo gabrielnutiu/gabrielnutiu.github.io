@@ -12,7 +12,7 @@ function on_touch_start(e)
 		circle.setAttribute("cy", touches[i].pageY);
 		circle.setAttribute("r", 10);
 		var svg = document.getElementById("id_svg");
-		svg.appendElement(circle);
+		svg.appendChild(circle);
 	}
 	
 }

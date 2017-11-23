@@ -1,7 +1,7 @@
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.22.3";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.22.4";
 
 
-var synt = window.speachSyntheseis;
+var synt = window.speechSynthesis;
 //---------------------------------------------------------------------------------------
 function get_voices()
 {

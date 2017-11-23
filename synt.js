@@ -7,7 +7,7 @@ function get_voices()
 {
 	var voices = synt.getVoices();
 	for(var i = 0; i < voices.length; i++){
-		var e = document.createElement("options");
+		var e = document.createElement("option");
 		e.text = voices[i].lang;
 		document.getElementById("id_voices").add(e);
 	}

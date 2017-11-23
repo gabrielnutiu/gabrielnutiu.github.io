@@ -12,7 +12,7 @@ var img_width = 100;
 var img_height = 100;
 
 img.onload = function(){
-context.drawImage(img, top_x, tpo_y, img_width, img_height);
+context.drawImage(img, top_x, top_y, img_width, img_height);
 var rect_img = img.getBoundingClientRect();
 }
 canvas.addEventListener("touchmove", on_touch_move);

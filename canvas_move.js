@@ -1,4 +1,4 @@
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.22.2";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.11.22.3";
 
 
 var canvas = document.getElementById("id_canvas");
@@ -29,7 +29,7 @@ function on_touch_move(e)
 			context.clearRect(0, 0, 400, 300);
 			top_x = touches[i].pageX - rect_canvas.left;
 			top_y = touches[i].pageY - rect_canvas.top;
-			context.drawImage(img, top_x, tpo_y, img_width, img_height);
+			context.drawImage(img, top_x, top_y, img_width, img_height);
 		}
 		
 		

@@ -1,8 +1,8 @@
-document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.12.06.2";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version: 2017.12.06.3";
 
 
 
-navigator.geolocation.getCurrentPosition(on_gps_success, on_gps_error);
+navigator.geolocation.watchPosition(on_gps_success, on_gps_error);
 
 function on_gps_success(p)
 {
@@ -17,7 +17,7 @@ function on_gps_success(p)
 		var map_str = "https://maps.googleapis.com/maps/api/staticmap?"+
 		"markers=color:blue|"+p.coords.latitude+","+p.coords.longitude+"|Palatul+Apor"+
 		"&path=color:0xff0000|"+p.coords.latitude+","+p.coords.longitude+"|Palatul+Apor"+
-		"&zoom=14"+
+		"&zoom=16"+
 		"&size=320x240"+
 		"&key=AIzaSyD3GKA83Hzafr-qNmlef-D7BgmSizrxE68";
 		document.getElementById("id_gps_img").setAttribute("src", map_str)

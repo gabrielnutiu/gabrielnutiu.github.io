@@ -1,5 +1,5 @@
 var d = new Date();
-document.getElementById("id_logic_level_version").innerHTML = "Business level version:"+d.getFullYear() + "." +d.getMonth() + 1 +"." +d.getDate()+".2";
+document.getElementById("id_logic_level_version").innerHTML = "Business level version:"+d.getFullYear() + "." +d.getMonth() + 1 +"." +d.getDate()+".3";
 
 var constraints = {audio: false, video:{facingMode :"environment"}};
 navigator.mediaDevices.getUserMedia(constraints).then(on_success).catch(on_error);
@@ -22,7 +22,7 @@ function on_error(error)
 function snap ()
 {
 	var canvas = document.getElementById("id_canvas");
-	var context = canvas.getContext("2D");
+	var context = canvas.getContext("2d");
 	context.drawImage( video, 0, 0, 640, 480);
 		
 	

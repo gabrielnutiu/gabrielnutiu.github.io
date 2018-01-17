@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = 'app'>
 <head>
+<meta charset = "utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title></title>
 <link rel = "stylesheet" href="">
-<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.nin.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 <script>
-var app = angular.module('app',[]);
-app.controller('MainCtrl', function($http){
-var vm = this;
-vm.fetchData = function(user){
-vm.loading = true;
-$http.get('https://api.github.com/users/' +user.name).then(function(res){
-vm.name = res.data.name'
-vm.location = res.data.location;
-vm.loading = false;
+	var app = angular.module('app',[]);
+
+	app.controller('MainCtrl', function($http){
+		var vm = this;
+		vm.fetchData = function(user){
+			vm.loading = true;
+			$http.get('https://api.github.com/users/' +user.name).then(function(res){
+			vm.name = res.data.name || 'Not found';
+			vm.location = res.data.location || 'Not found';
+			vm.loading = false;
+		})
+	}
 })
-}
-})
-<script>
+</script>
 </head>
 <body ng-controller = 'MainCtrl as vm'>
 	<label for="enter">Enter a username</label>
